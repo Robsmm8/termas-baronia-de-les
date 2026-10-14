@@ -6,7 +6,9 @@
 <meta name="description" content="Termas Baronía de Les: circuit termal amb aigua mineromedicinal sulfurada a Les, Val d'Aran. Reserva online.">
 <meta property="og:title" content="Termas Baronía de Les · Val d'Aran">
 <meta property="og:description" content="Circuit termal de 2 hores amb aigua mineromedicinal sulfurada. A 5 minuts de França.">
-<meta property="og:image" content="img/piscina-interior-panoramica.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://robsmm8.github.io/termas-baronia-de-les/">
+<meta property="og:image" content="https://robsmm8.github.io/termas-baronia-de-les/img/piscina-interior-panoramica.jpg">
 <link rel="icon" href="img/logo-termas-baronia-de-les.jpg">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}[hidden]{display:none!important}</style>
 <title>Termas Baronía de Les</title>
@@ -212,6 +214,7 @@ section{padding-block:clamp(48px,7vw,88px)}
 .cards{display:grid;gap:12px;align-content:start}
 .ccard{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:center}
 .ccard b{font:500 1.1rem var(--display);display:block;word-break:break-word;user-select:all}
+.ccard b a{color:inherit;text-decoration:none}
 .ccard small{color:var(--muted)}
 .copy{border:1px solid var(--line);background:none;color:var(--teal);border-radius:8px;padding:4px 10px;font-size:.85rem;margin-top:6px}
 .mapcard{position:relative;border-radius:var(--r);overflow:hidden;min-height:300px;display:grid;align-items:end;color:#fff}
@@ -260,6 +263,7 @@ footer ul{list-style:none;padding:0;margin:0;display:grid;gap:6px}
 .slots{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
 .slots button{border:1.5px solid var(--line);background:var(--bg);color:var(--ink);border-radius:10px;padding:10px 0;font:500 .95rem var(--display)}
 .slots button[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+.slots button:disabled{opacity:.35;cursor:not-allowed;text-decoration:line-through}
 .prow{display:grid;grid-template-columns:1fr auto;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--line)}
 .prow small{display:block;color:var(--muted)}
 .stepper{display:flex;align-items:center;gap:10px}
@@ -540,9 +544,9 @@ footer ul{list-style:none;padding:0;margin:0;display:grid;gap:6px}
       <div class="sec-head"><span class="eyebrow" data-t="nav.contact"></span><h1 data-t="ct.h1"></h1></div>
       <div class="contact">
         <div class="cards">
-          <div class="ccard"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><small data-t="ct.phone"></small><b>+34 973 648 717</b><b>+34 633 233 354</b><button class="copy" data-copy="+34 973 648 717" data-t="copy"></button></div></div>
-          <div class="ccard"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg></div><div><small>Email</small><b>info@termasbaroniadeles.com</b><button class="copy" data-copy="info@termasbaroniadeles.com" data-t="copy"></button></div></div>
-          <div class="ccard"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><small data-t="ct.addr"></small><b>Carrer de les Termes s/n</b><small data-t="ct.addr2"></small></div></div>
+          <div class="ccard"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><small data-t="ct.phone"></small><b><a href="tel:+34973648717">+34 973 648 717</a></b><b><a href="tel:+34633233354">+34 633 233 354</a></b><button class="copy" data-copy="+34 973 648 717" data-t="copy"></button></div></div>
+          <div class="ccard"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg></div><div><small>Email</small><b><a href="mailto:info@termasbaroniadeles.com">info@termasbaroniadeles.com</a></b><button class="copy" data-copy="info@termasbaroniadeles.com" data-t="copy"></button></div></div>
+          <div class="ccard"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><small data-t="ct.addr"></small><b>C/ Es Termes s/n</b><small data-t="ct.addr2"></small></div></div>
           <div class="dist">
             <div><b>5 min</b><span data-t="d1"></span></div>
             <div><b>20 min</b><span>Vielha</span></div>
@@ -570,14 +574,14 @@ footer ul{list-style:none;padding:0;margin:0;display:grid;gap:6px}
 
 <footer>
   <div class="wrap">
-    <div style="display:grid;gap:10px"><h3>Termas Baronía de Les</h3><p>Carrer de les Termes s/n · 25540 Les, Val d'Aran<br>+34 973 648 717 · info@termasbaroniadeles.com</p></div>
+    <div style="display:grid;gap:10px"><h3>Termas Baronía de Les</h3><p>C/ Es Termes s/n (antic Camí de la Llana) · 25540 Les, Val d'Aran (Lleida)<br><a href="tel:+34973648717">+34 973 648 717</a> · <a href="mailto:info@termasbaroniadeles.com">info@termasbaroniadeles.com</a></p></div>
     <div><h3 data-t="ft.visit"></h3><ul><li><a href="#circuito" data-t="nav.circuit"></a></li><li><a href="#aguas" data-t="nav.waters"></a></li><li><a href="#tarifas" data-t="nav.rates"></a></li></ul></div>
     <div><h3 data-t="ft.follow"></h3><ul><li><a href="https://instagram.com/termasbaroniadeles" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.facebook.com/termasdeles" target="_blank" rel="noopener">Facebook</a></li><li><a href="#contacto" data-t="ft.legal"></a></li></ul></div>
   </div>
 </footer>
 
 <div class="mbar">
-  <a href="#contacto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span data-t="call"></span></a>
+  <a href="tel:+34973648717"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span data-t="call"></span></a>
   <a href="https://www.google.com/maps/dir/?api=1&destination=42.8140359,0.7125784" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span data-t="dir"></span></a>
   <button class="go" data-book data-t="book"></button>
 </div>
@@ -605,7 +609,7 @@ ca:{
 'hero.eb':'Les · Val d\'Aran · Pirineu','hero.h1':'Les aigües termals<br>que ja guarien els romans',
 'hero.sub':'Circuit termal de 2 hores amb aigua mineromedicinal sulfurada, piscina interior i exterior, sauna, vaporarium i tres jacuzzis. A 5 minuts de França.',
 'hero.cta':'Reservar circuit · 38 €','hero.cta2':'Veure el circuit',
-'f1':'de circuit termal complet','f2':'aigua que brolla del manantial','f3':'de profunditat de captació','f4':'espais termals en un recorregut',
+'f1':'de circuit termal complet','f2':'aigua que brolla de la deu','f3':'de profunditat de captació','f4':'espais termals en un recorregut',
 'why.eb':'Per què venir','why.h2':'Un balneari de veritat, no un spa',
 'why1.h':'Aigua mineromedicinal','why1.p':'Aigua sulfurada, carbonatada i sòdica, rica en sílice. El sofre és l\'únic mineral que la pell absorbeix de manera demostrada. La seva olor característica és la prova de la seva riquesa.',
 'why2.h':'Dos mil anys d\'història','why2.p':'Pompeu va passar per aquestes termes. A Les s\'hi van trobar inscripcions romanes que agraeixen a les nimfes i a la deessa Lex les curacions obtingudes.',
@@ -619,18 +623,18 @@ ca:{
 'o1.tag':'La més reservada','o1.p':'Dues hores pels nou espais del circuit amb aigua sulfurada.',
 'o2.tag':'Després de l\'esquí','o2.p':'Circuit termal i massatge de cames de 25 minuts per recuperar-te després de la neu.',
 'o3.tag':'Per regalar','o3.p':'Circuit termal i massatge relaxant de 50 minuts. Ideal com a regal.',
-'kids.eb':'Dimecres TermalKids','kids.h2':'Els dimecres, els nens entren gratis','kids.p':'Menors de 4 mesos a 12 anys. Una tarda termal en família amb aigua mineromedicinal i piscina exterior.','kids.btn':'Reservar un dimecres',
+'kids.eb':'Dimecres TermalKids','kids.h2':'Els dimecres, els nens entren gratis','kids.p':'De 4 mesos a 12 anys. Una tarda termal en família amb aigua mineromedicinal i piscina exterior.','kids.btn':'Reservar un dimecres',
 'rev.eb':'Opinions','rev.h2':'Certificat d\'Excel·lència Tripadvisor','rev.p':'Reconeguts per les valoracions dels nostres visitants. Llegeix què opinen els qui ja hi han vingut.','rev.btn':'Llegir opinions',
 'c.eb':'Circuit termal · 2 hores','c.h1':'El recorregut, espai a espai','c.lead':'Aigua mineromedicinal sulfurada carbonatada sòdica, captada a més de 300 metres de profunditat i rica en sulfur d\'hidrogen, silici, magnesi i calci. Toca cada espai per veure\'l.',
 'gal.eb':'Galeria','gal.h2':'Així són les nostres instal·lacions','know.eb':'Abans de venir','know.h2':'El que has de saber',
 'r1.h':'Inclòs a l\'entrada','r1.p':'Tovallola, casquet, xancletes, got i gel. Treballem amb productes naturals, sense silicones, parabens, alcohol, colorants ni perfums.',
 'r2.h':'Normes d\'ús','r2.p':'Casquet i xancletes obligatoris. Edat mínima 6 anys, excepte a les sessions TermalKids (des de 4 mesos). Treu-te les joies de plata: el sofre les enfosqueix.',
-'r3.h':'Salut','r3.p':'Embarassades i persones amb hipertensió, problemes cardíacs o en tractament mèdic: consulteu a recepció abans d\'utilitzar la sauna i el vapor.',
+'r3.h':'Salut','r3.p':'Embarassades i persones amb hipertensió, problemes cardíacs o en tractament mèdic: consulta a recepció abans d\'utilitzar la sauna i el vapor.',
 'c.btn2':'Veure totes les tarifes',
 'w.h1':'Aigua sulfurada que la pell absorbeix','w.p1':'L\'aigua de Les neix a uns 30 °C i es capta a més de 300 metres de profunditat, amb un cabal de 16.000 litres per hora. És sulfurada, carbonatada i sòdica, rica en sílice i porta gas sulfhídric dissolt, que li dona la seva olor característica.',
 'w.p2':'El sofre en forma de gas és el que la fa especial: és l\'únic element del qual hi ha demostració objectiva d\'absorció a través de la pell.',
 'w.note':'L\'olor de sofre no és un defecte: indica que l\'aigua conserva el sulfur d\'hidrogen, el seu component més actiu.',
-'spec.h':'Fitxa tècnica del manantial','spec.type':'Tipus','spec.typev':'Sulfurada carbonatada sòdica','spec.temp':'Temperatura de surgència','spec.depth':'Profunditat de captació','spec.flow':'Cabal','spec.h2s':'Sulfur d\'hidrogen (H₂S)','spec.si':'Sílice (SiO₂)','spec.min':'Mineralització','spec.minv':'Molt feble','spec.cls':'Classificació','spec.clsv':'Hipotermal · hipotònica · tova',
+'spec.h':'Fitxa tècnica de la deu','spec.type':'Tipus','spec.typev':'Sulfurada carbonatada sòdica','spec.temp':'Temperatura de surgència','spec.depth':'Profunditat de captació','spec.flow':'Cabal','spec.h2s':'Sulfur d\'hidrogen (H₂S)','spec.si':'Sílice (SiO₂)','spec.min':'Mineralització','spec.minv':'Molt feble','spec.cls':'Classificació','spec.clsv':'Hipotermal · hipotònica · tova',
 'bars.cap':'Composició iònica (% del total del seu grup)','ion':['Sodi','Carbonats','Sulfats','Clorurs'],
 'ben.eb':'Beneficis','ben.h2':'Què fa l\'aigua pel teu cos','ben.p':'Les aigües sulfurades tenen acció antiinflamatòria, analgèsica, antifúngica i antipruriginosa. Aquests són els seus efectes per sistema.',
 'b1.h':'Pell','b1.l':'<li>Psoriasi, acne i dermatitis</li><li>Calma la picor i la irritació</li><li>Afavoreix la cicatrització</li><li>La sílice aporta suavitat</li>',
@@ -647,20 +651,21 @@ ca:{
 'rates.h1':'Planifica la teva visita','tab1':'Circuit termal','tab2':'Massatges i tractaments','tab3':'Horaris',
 'th.entry':'Entrada circuit termal (2 h)','th.price':'Preu','th.dur':'Durada','th.mass':'Massatges','th.other':'Altres tractaments',
 'r.full':'Entrada completa','r.senior':'Majors de 65 anys<small>20 % de descompte</small>','r.kid':'Infantil de 6 a 12 anys<small>20 % de descompte</small>',
-'r.res':'Residents amb DNI o padró<small>30 % de descompte. No inclou tovallola, casquet ni xancletes</small>','r.wed':'Dimecres TermalKids<small>Menors de 4 mesos a 12 anys</small>','free':'Gratis',
+'r.res':'Residents amb DNI o padró<small>30 % de descompte. No inclou tovallola, casquet ni xancletes</small>','r.wed':'Dimecres TermalKids<small>De 4 mesos a 12 anys</small>','free':'Gratis',
 'r.forfait':'Forfet 10 entrades<small>10 entrades individuals de 2 h · 23 € per entrada</small>',
 'incl':'<span class="chip">Tovallola</span><span class="chip">Casquet</span><span class="chip">Xancletes</span><span class="chip">Got</span><span class="chip">Gel natural</span>',
 'm1':'Descontracturant d\'esquena','m2':'Descontracturant de coll','m3':'Antiestrès relaxant','m4':'Après-ski cames','m5':'Après-ski integral cames i glutis','m6':'Infantil amb cacau','m7':'Tailandès',
 'x1':'Estètica facial','x2':'Estètica corporal','x3':'Tractaments ayurvèdics','x4':'Pack embarassada',
 'hours.note':'Festius i ponts obrim de dilluns a diumenge, de 15:00 a 21:00. Última entrada recomanada a les 19:00 per gaudir de les 2 hores.',
-'season.h':'Temporada','season.note':'Obert de l\'1 de desembre al 30 d\'octubre. Al novembre tanquem per manteniment.','closed':'Tancat','vat':'Preus amb IVA inclòs.',
+'season.h':'Temporada','season.note':'Obert de l\'1 de desembre al 31 d\'octubre. Al novembre tanquem per manteniment.','closed':'Tancat','vat':'Preus amb IVA inclòs.',
 'ct.h1':'Com arribar i parlar amb nosaltres','ct.phone':'Telèfon','ct.addr':'Adreça','ct.addr2':'Antic Camí de la Llana · 25540 Les, Val d\'Aran (Lleida)','copy':'Copiar',
 'd1':'Frontera francesa','ct.distnote':'Temps aproximats en cotxe. Aparcament al costat de les termes.','ct.maps':'Com arribar amb Google Maps',
 'form.h':'Escriu-nos','form.name':'Nom','form.msg':'Consulta','form.err':'Omple el nom, un email vàlid i la consulta.','form.send':'Enviar consulta','form.ok':'Consulta preparada (prototip: no s\'envia)',
 'ft.visit':'Visita','ft.follow':'Segueix-nos','ft.legal':'Avís legal · Privadesa · Galetes','call':'Trucar','dir':'Com arribar',
 'b.title':'Reserva la teva visita','b.s1':'Pas 1 · Tria la teva experiència','b.s2':'Pas 2 · Dia, hora i persones','b.s3':'Pas 3 · Confirma',
-'b.day':'Dia','b.dayerr':'Aquest dia és tancat. Obrim de dimecres a diumenge (i festius), de l\'1 de desembre al 30 d\'octubre.','b.time':'Hora d\'entrada',
+'b.day':'Dia','b.dayerr':'Aquest dia és tancat. Obrim de dimecres a diumenge (i festius), de l\'1 de desembre al 31 d\'octubre.','b.time':'Hora d\'entrada',
 'b.ad':'Adults','b.se':'Majors de 65','b.se.s':'−20 % al circuit','b.ki':'Nens de 6 a 12','b.ki.s':'−20 % · gratis els dimecres',
+'b.tk':'Nens de 4 mesos a 5 anys','b.tk.s':'TermalKids · gratis','b.noslot':'Avui ja no queden hores d\'entrada. Tria un altre dia.','b.ph':'nom@exemple.com',
 'b.total':'Total','b.sloterr':'Tria una hora d\'entrada.','back':'Enrere','next':'Continuar','confirm':'Confirmar reserva',
 'b.exp':'Experiència','b.entry':'Entrada','b.people':'Persones','b.mail':'Email per a la confirmació','b.mailerr':'Escriu un email vàlid per enviar-te la confirmació.',
 'b.incl':'Tovallola, casquet i xancletes inclosos. Cancel·lació gratuïta fins a 24 h abans.','b.done':'Reserva preparada','b.donep':'A la web real, aquí es cobraria el pagament i arribaria la confirmació per email.','b.proto':'Prototip de demostració: no s\'ha enviat cap reserva.','close':'Tancar','add':'Afegir','rem':'Treure',
@@ -697,13 +702,13 @@ es:{
 'o1.tag':'La más reservada','o1.p':'Dos horas por los nueve espacios del circuito con agua sulfurada.',
 'o2.tag':'Después del esquí','o2.p':'Circuito termal y masaje de piernas de 25 minutos para recuperar tras la nieve.',
 'o3.tag':'Para regalar','o3.p':'Circuito termal y masaje relajante de 50 minutos. Ideal como regalo.',
-'kids.eb':'Miércoles TermalKids','kids.h2':'Los miércoles, los niños entran gratis','kids.p':'Menores de 4 meses a 12 años. Una tarde termal en familia con agua mineromedicinal y piscina exterior.','kids.btn':'Reservar un miércoles',
+'kids.eb':'Miércoles TermalKids','kids.h2':'Los miércoles, los niños entran gratis','kids.p':'De 4 meses a 12 años. Una tarde termal en familia con agua mineromedicinal y piscina exterior.','kids.btn':'Reservar un miércoles',
 'rev.eb':'Opiniones','rev.h2':'Certificado de Excelencia Tripadvisor','rev.p':'Reconocidos por las valoraciones de nuestros visitantes. Lee lo que opinan quienes ya han venido.','rev.btn':'Leer opiniones',
 'c.eb':'Circuito termal · 2 horas','c.h1':'El recorrido, espacio a espacio','c.lead':'Agua mineromedicinal sulfurada carbonatada sódica, captada a más de 300 metros de profundidad y rica en sulfuro de hidrógeno, silicio, magnesio y calcio. Pulsa cada espacio para verlo.',
 'gal.eb':'Galería','gal.h2':'Así son nuestras instalaciones','know.eb':'Antes de venir','know.h2':'Lo que debes saber',
 'r1.h':'Incluido en la entrada','r1.p':'Toalla, gorro, chanclas, vaso y gel. Trabajamos con productos naturales, sin siliconas, parabenos, alcohol, colorantes ni perfumes.',
 'r2.h':'Normas de uso','r2.p':'Gorro y chanclas obligatorios. Edad mínima 6 años, excepto en las sesiones TermalKids (desde 4 meses). Quítate las joyas de plata: el azufre las oscurece.',
-'r3.h':'Salud','r3.p':'Embarazadas y personas con hipertensión, problemas cardíacos o en tratamiento médico: consultad en recepción antes de usar sauna y vapor.',
+'r3.h':'Salud','r3.p':'Embarazadas y personas con hipertensión, problemas cardíacos o en tratamiento médico: consulta en recepción antes de usar sauna y vapor.',
 'c.btn2':'Ver todas las tarifas',
 'w.h1':'Agua sulfurada que la piel absorbe','w.p1':'El agua de Les nace a unos 30 °C y se capta a más de 300 metros de profundidad, con un caudal de 16.000 litros por hora. Es sulfurada, carbonatada y sódica, rica en sílice y lleva gas sulfhídrico disuelto, que le da su olor característico.',
 'w.p2':'El azufre en forma de gas es lo que la hace especial: es el único elemento del que existe demostración objetiva de absorción a través de la piel.',
@@ -711,7 +716,7 @@ es:{
 'spec.h':'Ficha técnica del manantial','spec.type':'Tipo','spec.typev':'Sulfurada carbonatada sódica','spec.temp':'Temperatura de surgencia','spec.depth':'Profundidad de captación','spec.flow':'Caudal','spec.h2s':'Sulfuro de hidrógeno (H₂S)','spec.si':'Sílice (SiO₂)','spec.min':'Mineralización','spec.minv':'Muy débil','spec.cls':'Clasificación','spec.clsv':'Hipotermal · hipotónica · blanda',
 'bars.cap':'Composición iónica (% del total de su grupo)','ion':['Sodio','Carbonatos','Sulfatos','Cloruros'],
 'ben.eb':'Beneficios','ben.h2':'Qué hace el agua por tu cuerpo','ben.p':'Las aguas sulfuradas tienen acción antiinflamatoria, analgésica, antifúngica y antipruriginosa. Estos son sus efectos por sistema.',
-'b1.h':'Piel','b1.l':'<li>Psoriasis, acné y dermatitis</li><li>Calma el picor y la irritación</li><li>Favorece la cicatrización</li><li>El sílice aporta suavidad</li>',
+'b1.h':'Piel','b1.l':'<li>Psoriasis, acné y dermatitis</li><li>Calma el picor y la irritación</li><li>Favorece la cicatrización</li><li>La sílice aporta suavidad</li>',
 'b2.h':'Articulaciones y músculos','b2.l':'<li>Reumatismos, artrosis y artritis</li><li>Efecto analgésico y antiinflamatorio</li><li>Recuperación tras el deporte</li>',
 'b3.h':'Vías respiratorias','b3.l':'<li>Acción mucolítica</li><li>Mejora la actividad respiratoria</li><li>Apoyo en procesos alérgicos</li>',
 'b4.h':'Circulación','b4.l':'<li>Vasodilatación y mejor riego</li><li>Sensación de piernas ligeras</li><li>Contrastes frío-calor del circuito</li>',
@@ -725,20 +730,21 @@ es:{
 'rates.h1':'Planifica tu visita','tab1':'Circuito termal','tab2':'Masajes y tratamientos','tab3':'Horarios',
 'th.entry':'Entrada circuito termal (2 h)','th.price':'Precio','th.dur':'Duración','th.mass':'Masajes','th.other':'Otros tratamientos',
 'r.full':'Entrada completa','r.senior':'Mayores de 65 años<small>20 % de descuento</small>','r.kid':'Infantil de 6 a 12 años<small>20 % de descuento</small>',
-'r.res':'Residentes con DNI o padrón<small>30 % de descuento. No incluye toalla, gorro ni chanclas</small>','r.wed':'Miércoles TermalKids<small>Menores de 4 meses a 12 años</small>','free':'Gratis',
+'r.res':'Residentes con DNI o padrón<small>30 % de descuento. No incluye toalla, gorro ni chanclas</small>','r.wed':'Miércoles TermalKids<small>De 4 meses a 12 años</small>','free':'Gratis',
 'r.forfait':'Forfait 10 entradas<small>10 entradas individuales de 2 h · 23 € por entrada</small>',
 'incl':'<span class="chip">Toalla</span><span class="chip">Gorro</span><span class="chip">Chanclas</span><span class="chip">Vaso</span><span class="chip">Gel natural</span>',
 'm1':'Descontracturante de espalda','m2':'Descontracturante de cuello','m3':'Antiestrés relajante','m4':'Après-ski piernas','m5':'Après-ski integral piernas y glúteos','m6':'Infantil con cacao','m7':'Tailandés',
 'x1':'Estética facial','x2':'Estética corporal','x3':'Tratamientos ayurvédicos','x4':'Pack embarazada',
 'hours.note':'Festivos y puentes abrimos de lunes a domingo, de 15:00 a 21:00. Última entrada recomendada a las 19:00 para disfrutar de las 2 horas.',
-'season.h':'Temporada','season.note':'Abierto del 1 de diciembre al 30 de octubre. En noviembre cerramos por mantenimiento.','closed':'Cerrado','vat':'Precios con IVA incluido.',
+'season.h':'Temporada','season.note':'Abierto del 1 de diciembre al 31 de octubre. En noviembre cerramos por mantenimiento.','closed':'Cerrado','vat':'Precios con IVA incluido.',
 'ct.h1':'Cómo llegar y hablar con nosotros','ct.phone':'Teléfono','ct.addr':'Dirección','ct.addr2':'Antiguo Camino de la Lana · 25540 Les, Val d\'Aran (Lleida)','copy':'Copiar',
 'd1':'Frontera francesa','ct.distnote':'Tiempos aproximados en coche. Aparcamiento junto a las termas.','ct.maps':'Cómo llegar con Google Maps',
 'form.h':'Escríbenos','form.name':'Nombre','form.msg':'Consulta','form.err':'Completa nombre, un email válido y tu consulta.','form.send':'Enviar consulta','form.ok':'Consulta preparada (prototipo: no se envía)',
 'ft.visit':'Visita','ft.follow':'Síguenos','ft.legal':'Aviso legal · Privacidad · Cookies','call':'Llamar','dir':'Cómo llegar',
 'b.title':'Reserva tu visita','b.s1':'Paso 1 · Elige tu experiencia','b.s2':'Paso 2 · Día, hora y personas','b.s3':'Paso 3 · Confirma',
-'b.day':'Día','b.dayerr':'Ese día está cerrado. Abrimos de miércoles a domingo (y festivos), del 1 de diciembre al 30 de octubre.','b.time':'Hora de entrada',
+'b.day':'Día','b.dayerr':'Ese día está cerrado. Abrimos de miércoles a domingo (y festivos), del 1 de diciembre al 31 de octubre.','b.time':'Hora de entrada',
 'b.ad':'Adultos','b.se':'Mayores de 65','b.se.s':'−20 % en el circuito','b.ki':'Niños de 6 a 12','b.ki.s':'−20 % · gratis los miércoles',
+'b.tk':'Niños de 4 meses a 5 años','b.tk.s':'TermalKids · gratis','b.noslot':'Hoy ya no quedan horas de entrada. Elige otro día.','b.ph':'nombre@ejemplo.com',
 'b.total':'Total','b.sloterr':'Elige una hora de entrada.','back':'Atrás','next':'Continuar','confirm':'Confirmar reserva',
 'b.exp':'Experiencia','b.entry':'Entrada','b.people':'Personas','b.mail':'Email para la confirmación','b.mailerr':'Escribe un email válido para enviarte la confirmación.',
 'b.incl':'Toalla, gorro y chanclas incluidos. Cancelación gratuita hasta 24 h antes.','b.done':'Reserva preparada','b.donep':'En la web real, aquí se cobraría el pago y llegaría la confirmación por email.','b.proto':'Prototipo de demostración: no se ha enviado ninguna reserva.','close':'Cerrar','add':'Añadir','rem':'Quitar',
@@ -751,7 +757,7 @@ es:{
 ['Sauna finlandesa','Calor seco','Calor seco en madera que favorece la sudoración y la eliminación de toxinas. Combínala con la ducha fría para activar la circulación.',['Calor seco','Madera']],
 ['Sala de mármol caliente','Tepidarium','Bancos de mármol templado para relajar la espalda y preparar el cuerpo entre el calor y el frío, como en las termas romanas.',['Mármol templado','Tradición romana']],
 ['Vaporarium','Calor húmedo','Baño de vapor que abre los poros y descongestiona las vías respiratorias. Muy recomendado combinado con el agua sulfurada.',['Vapor','Respiratorio']],
-['Duchas cubo y agua muy fría','Contraste térmico','Ducha de cubo y bañera de inmersión de agua muy fría. El contraste con el calor activa la circulación y despierta el cuerpo.',['Frío','Circulación']],
+['Duchas de cubo y agua muy fría','Contraste térmico','Ducha de cubo y bañera de inmersión de agua muy fría. El contraste con el calor activa la circulación y despierta el cuerpo.',['Frío','Circulación']],
 ['Pediluvio y reflexología','Pista podal','Recorrido para los pies con piedras y agua a distintas temperaturas que estimula los puntos reflejos y alivia las piernas cansadas.',['Pies','Piernas ligeras']],
 ['Zona de relax','Tés e infusiones','Termina el circuito con calma, con una selección de tés e infusiones y luz tenue.',['Infusiones','Descanso']]
 ]},
@@ -809,14 +815,15 @@ fr:{
 'm1':'Décontracturant du dos','m2':'Décontracturant de la nuque','m3':'Anti-stress relaxant','m4':'Après-ski jambes','m5':'Après-ski intégral jambes et fessiers','m6':'Enfant au cacao','m7':'Thaïlandais',
 'x1':'Soin du visage','x2':'Soin du corps','x3':'Soins ayurvédiques','x4':'Pack femme enceinte',
 'hours.note':'Jours fériés et ponts : ouvert du lundi au dimanche, de 15 h à 21 h. Dernière entrée conseillée à 19 h pour profiter des 2 heures.',
-'season.h':'Saison','season.note':'Ouvert du 1er décembre au 30 octobre. Fermé en novembre pour maintenance.','closed':'Fermé','vat':'Prix TVA incluse.',
+'season.h':'Saison','season.note':'Ouvert du 1er décembre au 31 octobre. Fermé en novembre pour maintenance.','closed':'Fermé','vat':'Prix TVA incluse.',
 'ct.h1':'Accès et contact','ct.phone':'Téléphone','ct.addr':'Adresse','ct.addr2':'Ancien Chemin de la Laine · 25540 Les, Val d\'Aran (Lleida, Espagne)','copy':'Copier',
 'd1':'Frontière française','ct.distnote':'Temps approximatifs en voiture. Parking à côté des thermes.','ct.maps':'Itinéraire avec Google Maps',
 'form.h':'Écrivez-nous','form.name':'Nom','form.msg':'Votre demande','form.err':'Indiquez votre nom, un e-mail valide et votre demande.','form.send':'Envoyer','form.ok':'Demande préparée (prototype : rien n\'est envoyé)',
 'ft.visit':'Visite','ft.follow':'Suivez-nous','ft.legal':'Mentions légales · Confidentialité · Cookies','call':'Appeler','dir':'Itinéraire',
 'b.title':'Réservez votre visite','b.s1':'Étape 1 · Choisissez votre expérience','b.s2':'Étape 2 · Jour, heure et personnes','b.s3':'Étape 3 · Confirmez',
-'b.day':'Jour','b.dayerr':'Ce jour-là, nous sommes fermés. Ouvert du mercredi au dimanche (et jours fériés), du 1er décembre au 30 octobre.','b.time':'Heure d\'entrée',
+'b.day':'Jour','b.dayerr':'Ce jour-là, nous sommes fermés. Ouvert du mercredi au dimanche (et jours fériés), du 1er décembre au 31 octobre.','b.time':'Heure d\'entrée',
 'b.ad':'Adultes','b.se':'Plus de 65 ans','b.se.s':'−20 % sur le circuit','b.ki':'Enfants de 6 à 12 ans','b.ki.s':'−20 % · gratuit le mercredi',
+'b.tk':'Enfants de 4 mois à 5 ans','b.tk.s':'TermalKids · gratuit','b.noslot':'Plus aucun créneau disponible aujourd\'hui. Choisissez un autre jour.','b.ph':'nom@exemple.com',
 'b.total':'Total','b.sloterr':'Choisissez une heure d\'entrée.','back':'Retour','next':'Continuer','confirm':'Confirmer la réservation',
 'b.exp':'Expérience','b.entry':'Entrée','b.people':'Personnes','b.mail':'E-mail pour la confirmation','b.mailerr':'Saisissez un e-mail valide pour recevoir la confirmation.',
 'b.incl':'Serviette, bonnet et sandales inclus. Annulation gratuite jusqu\'à 24 h avant.','b.done':'Réservation prête','b.donep':'Sur le vrai site, le paiement serait encaissé ici et la confirmation arriverait par e-mail.','b.proto':'Prototype de démonstration : aucune réservation n\'a été envoyée.','close':'Fermer','add':'Ajouter','rem':'Retirer',
@@ -840,7 +847,7 @@ en:{
 'hero.sub':'A 2-hour thermal circuit with sulphurous mineral-medicinal water, indoor and outdoor pools, sauna, steam room and three jacuzzis. 5 minutes from France.',
 'hero.cta':'Book the circuit · €38','hero.cta2':'See the circuit',
 'f1':'full thermal circuit','f2':'water straight from the spring','f3':'deep borehole','f4':'thermal areas in one route',
-'why.eb':'Why come','why.h2':'A real thermal spa, not just a spa',
+'why.eb':'Why come','why.h2':'A real thermal bath, not just a spa',
 'why1.h':'Mineral-medicinal water','why1.p':'Sulphurous, carbonated, sodium-rich water with plenty of silica. Sulphur is the only mineral proven to be absorbed through the skin. Its distinctive smell is the sign of its richness.',
 'why2.h':'Two thousand years of history','why2.p':'Pompey visited these baths. Roman inscriptions found in Les thank the nymphs and the goddess Lex for the cures they received.',
 'why3.h':'The best end to a mountain day','why3.p':'After skiing, a hike or a day out in the Val d\'Aran. Après-ski leg massages and a circuit with mountain views.',
@@ -887,14 +894,15 @@ en:{
 'm1':'Back tension relief','m2':'Neck tension relief','m3':'Relaxing anti-stress','m4':'Après-ski legs','m5':'Full après-ski legs and glutes','m6':'Children\'s cocoa massage','m7':'Thai',
 'x1':'Facial','x2':'Body treatment','x3':'Ayurvedic treatments','x4':'Pregnancy pack',
 'hours.note':'On public holidays and long weekends we open Monday to Sunday, 3 pm to 9 pm. Last recommended entry at 7 pm to enjoy the full 2 hours.',
-'season.h':'Season','season.note':'Open 1 December to 30 October. Closed in November for maintenance.','closed':'Closed','vat':'Prices include VAT.',
+'season.h':'Season','season.note':'Open 1 December to 31 October. Closed in November for maintenance.','closed':'Closed','vat':'Prices include VAT.',
 'ct.h1':'Getting here and getting in touch','ct.phone':'Phone','ct.addr':'Address','ct.addr2':'Old Wool Road · 25540 Les, Val d\'Aran (Lleida, Spain)','copy':'Copy',
 'd1':'French border','ct.distnote':'Approximate driving times. Parking next to the baths.','ct.maps':'Directions in Google Maps',
 'form.h':'Write to us','form.name':'Name','form.msg':'Your question','form.err':'Please fill in your name, a valid email and your question.','form.send':'Send','form.ok':'Message ready (prototype: nothing is sent)',
 'ft.visit':'Visit','ft.follow':'Follow us','ft.legal':'Legal notice · Privacy · Cookies','call':'Call','dir':'Directions',
 'b.title':'Book your visit','b.s1':'Step 1 · Choose your experience','b.s2':'Step 2 · Date, time and guests','b.s3':'Step 3 · Confirm',
-'b.day':'Date','b.dayerr':'We are closed that day. Open Wednesday to Sunday (and public holidays), 1 December to 30 October.','b.time':'Entry time',
+'b.day':'Date','b.dayerr':'We are closed that day. Open Wednesday to Sunday (and public holidays), 1 December to 31 October.','b.time':'Entry time',
 'b.ad':'Adults','b.se':'Over 65s','b.se.s':'20% off the circuit','b.ki':'Children 6 to 12','b.ki.s':'20% off · free on Wednesdays',
+'b.tk':'Children 4 months to 5 years','b.tk.s':'TermalKids · free','b.noslot':'No entry times left today. Please choose another day.','b.ph':'name@example.com',
 'b.total':'Total','b.sloterr':'Choose an entry time.','back':'Back','next':'Continue','confirm':'Confirm booking',
 'b.exp':'Experience','b.entry':'Entry','b.people':'Guests','b.mail':'Email for your confirmation','b.mailerr':'Enter a valid email so we can send your confirmation.',
 'b.incl':'Towel, cap and flip-flops included. Free cancellation up to 24 h before.','b.done':'Booking ready','b.donep':'On the live site, payment would be taken here and the confirmation would arrive by email.','b.proto':'Demo prototype: no booking has been sent.','close':'Close','add':'Add','rem':'Remove',
@@ -932,6 +940,10 @@ menuBtn.onclick=()=>{const o=nav.classList.toggle('open');menuBtn.setAttribute('
 
 /* ================= Horari (hora de Madrid) ================= */
 const OPEN_DAYS=[2,3,4,5,6]; // dc-dg (0 = dilluns)
+// Festius i ponts que cauen en dilluns o dimarts (dies en què també obrim). Afegir-ne aquí cada temporada (AAAA-MM-DD).
+const HOLIDAYS=['2026-12-07','2026-12-08','2027-03-29','2027-10-11','2027-10-12'];
+const iso=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+const isOpenDay=d=>inSeason(d.getMonth())&&(OPEN_DAYS.includes((d.getDay()+6)%7)||HOLIDAYS.includes(iso(d)));
 function madridNow(){
   const p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Madrid',year:'numeric',month:'numeric',day:'numeric',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date());
   const g=k=>+p.find(x=>x.type===k).value;
@@ -943,11 +955,11 @@ const dayName=(wd,style='long')=>new Intl.DateTimeFormat(LOC[lang],{weekday:styl
 function statusText(){
   const n=madridNow();
   if(!inSeason(n.date.getMonth()))return [false,t('s.nov')];
-  const mins=n.h*60+n.m,openToday=OPEN_DAYS.includes(n.wd);
+  const mins=n.h*60+n.m,openToday=isOpenDay(n.date);
   if(openToday&&mins>=900&&mins<1260)return [true,t('s.open')];
   if(openToday&&mins<900)return [false,t('s.today')];
   for(let i=1;i<=7;i++){const wd=(n.wd+i)%7,dd=new Date(n.date);dd.setDate(dd.getDate()+i);
-    if(OPEN_DAYS.includes(wd)&&inSeason(dd.getMonth()))return [false,t('s.next').replace('{d}',i===1?t('tomorrow'):t('the')+dayName(wd))];}
+    if(isOpenDay(dd))return [false,t('s.next').replace('{d}',i===1?t('tomorrow'):t('the')+dayName(wd))];}
   return [false,t('s.closed')];
 }
 function paintStatus(){const [o,x]=statusText();document.querySelectorAll('[data-status]').forEach(s=>{s.classList.toggle('open',o);s.querySelector('span').textContent=x})}
@@ -1002,12 +1014,14 @@ document.getElementById('ptabs').addEventListener('click',e=>{const b=e.target.c
 /* ================= Reserva en 3 passos ================= */
 const EXP={circuito:38,apres:88,relax:123};
 const SLOTS=['15:00','16:00','17:00','18:00','19:00'];
-const bk={exp:null,date:'',slot:'',ad:2,se:0,ki:0,step:1};
+const bk={exp:null,date:'',slot:'',ad:2,se:0,ki:0,tk:0,step:1};
 const book=document.getElementById('book'),bc=document.getElementById('bcontent');
 const money=n=>new Intl.NumberFormat(LOC[lang],{style:'currency',currency:'EUR',minimumFractionDigits:n%1?2:0}).format(n);
-const iso=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
-function validDate(s){if(!s)return false;const d=new Date(s+'T12:00');return OPEN_DAYS.includes((d.getDay()+6)%7)&&inSeason(d.getMonth())}
-function price(){const p=EXP[bk.exp];if(!p)return 0;const extra=p-38;const d=bk.date?new Date(bk.date+'T12:00'):null;const wed=d&&((d.getDay()+6)%7)===2;
+function validDate(s){return !!s&&isOpenDay(new Date(s+'T12:00'))}
+const isWed=s=>!!s&&(new Date(s+'T12:00').getDay()+6)%7===2;
+// Hores encara disponibles per a una data (avui, només les que no han passat, hora de Madrid)
+function slotsFor(s){const n=madridNow();if(s!==iso(n.date))return SLOTS;const mins=n.h*60+n.m;return SLOTS.filter(x=>+x.slice(0,2)*60>mins)}
+function price(){const p=EXP[bk.exp];if(!p)return 0;const extra=p-38;const wed=isWed(bk.date);
   return bk.ad*p+bk.se*(30.4+extra)+bk.ki*(wed?extra:30.4+extra)}
 function openBook(exp){bk.exp=exp||null;bk.step=exp?2:1;book.hidden=false;renderBook()}
 document.addEventListener('click',e=>{const b=e.target.closest('[data-book]');if(b){e.preventDefault();openBook(b.dataset.book||null)}});
@@ -1022,26 +1036,33 @@ function renderBook(){
     bc.querySelectorAll('[data-exp]').forEach(b=>b.onclick=()=>{bk.exp=b.dataset.exp;bk.step=2;renderBook()});
   } else if(bk.step===2){
     const n=madridNow();
-    if(!bk.date){for(let i=0;i<60;i++){const d=new Date(n.date);d.setDate(d.getDate()+i);if(validDate(iso(d))){bk.date=iso(d);break}}}
+    if(!bk.date){for(let i=0;i<60;i++){const d=new Date(n.date);d.setDate(d.getDate()+i);if(validDate(iso(d))&&slotsFor(iso(d)).length){bk.date=iso(d);break}}}
+    if(!isWed(bk.date))bk.tk=0;
     const rows=[['ad',t('b.ad'),money(EXP[bk.exp])],['se',t('b.se'),t('b.se.s')],['ki',t('b.ki'),t('b.ki.s')]];
+    if(isWed(bk.date))rows.push(['tk',t('b.tk'),t('b.tk.s')]);
     bc.innerHTML=`<div class="dbody"><p class="eyebrow">${t('b.s2')}</p><p><b>${t('exp.'+bk.exp)}</b> · ${t('exp.'+bk.exp+'.d')}</p>
       <label class="flabel" for="bdate">${t('b.day')}<input type="date" id="bdate" min="${iso(n.date)}" value="${bk.date}"></label>
-      <p class="err" id="derr" hidden>${t('b.dayerr')}</p>
+      <p class="err" id="derr" hidden>${t('b.dayerr')}</p><p class="err" id="nerr" hidden>${t('b.noslot')}</p>
       <div class="flabel"><span>${t('b.time')}</span><div class="slots">${SLOTS.map(s=>`<button aria-pressed="${s===bk.slot}" data-slot="${s}">${s}</button>`).join('')}</div></div>
       <div>${rows.map(([k,l,s])=>`<div class="prow"><div><b>${l}</b><small>${s}</small></div><div class="stepper"><button data-k="${k}" data-d="-1" aria-label="${t('rem')}">−</button><output id="o-${k}">${bk[k]}</output><button data-k="${k}" data-d="1" aria-label="${t('add')}">+</button></div></div>`).join('')}</div>
       <div class="total"><span>${t('b.total')}</span><b id="btotal">${money(price())}</b></div><p class="err" id="serr" hidden>${t('b.sloterr')}</p></div>
       <div class="dfoot"><button class="btn btn-ghost" id="bback">${t('back')}</button><button class="btn btn-primary" id="bnext">${t('next')}</button></div>`;
-    const di=document.getElementById('bdate');const chk=()=>{const ok=validDate(di.value);document.getElementById('derr').hidden=ok;return ok};chk();
+    const di=document.getElementById('bdate');
+    // Valida el dia i desactiva les hores que ja han passat
+    const chk=()=>{const day=validDate(di.value),av=day?slotsFor(di.value):[];
+      if(!av.includes(bk.slot))bk.slot='';
+      bc.querySelectorAll('[data-slot]').forEach(x=>{x.disabled=!av.includes(x.dataset.slot);x.setAttribute('aria-pressed',x.dataset.slot===bk.slot)});
+      document.getElementById('derr').hidden=day;document.getElementById('nerr').hidden=!day||av.length>0;return day&&av.length>0};chk();
     const tot=()=>document.getElementById('btotal').textContent=money(price());
-    di.onchange=()=>{bk.date=di.value;chk();tot()};
+    di.onchange=()=>{const wasWed=isWed(bk.date);bk.date=di.value;if(isWed(bk.date)!==wasWed){renderBook();document.getElementById('bdate').focus();return}chk();tot()};
     bc.querySelectorAll('[data-slot]').forEach(b=>b.onclick=()=>{bk.slot=b.dataset.slot;bc.querySelectorAll('[data-slot]').forEach(x=>x.setAttribute('aria-pressed',x===b));document.getElementById('serr').hidden=true});
     bc.querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>{const k=b.dataset.k;bk[k]=Math.max(0,Math.min(20,bk[k]+(+b.dataset.d)));if(bk.ad+bk.se===0){bk.ad=1;document.getElementById('o-ad').textContent=1}document.getElementById('o-'+k).textContent=bk[k];tot()});
     document.getElementById('bback').onclick=()=>{bk.step=1;renderBook()};
     document.getElementById('bnext').onclick=()=>{if(!chk())return;if(!bk.slot){document.getElementById('serr').hidden=false;return}bk.step=3;renderBook()};
   } else if(bk.step===3){
     const ds=new Date(bk.date+'T12:00').toLocaleDateString(LOC[lang],{weekday:'long',day:'numeric',month:'long'});
-    bc.innerHTML=`<div class="dbody"><p class="eyebrow">${t('b.s3')}</p><dl class="summary"><dt>${t('b.exp')}</dt><dd>${t('exp.'+bk.exp)}</dd><dt>${t('b.day')}</dt><dd>${ds}</dd><dt>${t('b.entry')}</dt><dd>${bk.slot}</dd><dt>${t('b.people')}</dt><dd>${bk.ad+bk.se+bk.ki}</dd><dt>${t('b.total')}</dt><dd>${money(price())}</dd></dl>
-      <label class="flabel" for="bmail">${t('b.mail')}<input id="bmail" type="email" autocomplete="email" placeholder="nom@email.com"></label>
+    bc.innerHTML=`<div class="dbody"><p class="eyebrow">${t('b.s3')}</p><dl class="summary"><dt>${t('b.exp')}</dt><dd>${t('exp.'+bk.exp)}</dd><dt>${t('b.day')}</dt><dd>${ds}</dd><dt>${t('b.entry')}</dt><dd>${bk.slot}</dd><dt>${t('b.people')}</dt><dd>${bk.ad+bk.se+bk.ki+bk.tk}</dd><dt>${t('b.total')}</dt><dd>${money(price())}</dd></dl>
+      <label class="flabel" for="bmail">${t('b.mail')}<input id="bmail" type="email" autocomplete="email" placeholder="${t('b.ph')}"></label>
       <p class="err" id="merr" hidden>${t('b.mailerr')}</p><p class="small">${t('b.incl')}</p></div>
       <div class="dfoot"><button class="btn btn-ghost" id="bback">${t('back')}</button><button class="btn btn-primary" id="bok">${t('confirm')}</button></div>`;
     document.getElementById('bback').onclick=()=>{bk.step=2;renderBook()};
