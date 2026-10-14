@@ -64,6 +64,8 @@ nav.main a[aria-current="page"]{background:var(--navy);color:#fff}
 .lang svg{width:18px;height:12px;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.18);display:block}
 .lang button[aria-pressed="true"] svg{box-shadow:0 0 0 1.5px #fff}
 .lang button[aria-pressed="true"]{color:#fff;background:var(--teal)}
+.langwrap{position:relative;display:flex;flex-shrink:0}
+.lang-toggle,.lang .ln{display:none}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:13px 24px;font:600 1rem var(--display);text-decoration:none;transition:transform .15s,background .15s;text-align:center}
 .btn:active{transform:scale(.98)}
 .btn-primary{background:var(--ochre);color:#1E1406}
@@ -82,9 +84,19 @@ nav.main a[aria-current="page"]{background:var(--navy);color:#fff}
   nav.main a{padding:14px 16px;font-size:1.1rem}
   .menu-btn{display:inline-flex;align-items:center;justify-content:center}
   .bar .btn-primary{display:none}
-  .lang{margin-left:auto}
+  .langwrap{margin-left:auto}
 }
-@media (max-width:420px){.logo img{height:56px}.lang button{min-width:28px;padding:6px 4px}.bar{gap:10px}}
+@media (max-width:720px){
+  .lang-toggle{display:inline-flex;align-items:center;gap:7px;height:46px;padding:0 12px;border:1.5px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);font:600 .92rem var(--display)}
+  .lang-toggle #langCur{display:flex;align-items:center;gap:7px}
+  .lang-toggle #langCur svg{width:20px;height:13px;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.18)}
+  .lang{display:none;position:absolute;top:calc(100% + 8px);right:0;z-index:50;flex-direction:column;gap:2px;min-width:180px;padding:6px;background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:0 20px 40px rgba(0,0,0,.18)}
+  .lang.open{display:flex}
+  .lang button{flex-direction:row;justify-content:flex-start;gap:10px;padding:12px 12px;font-size:.95rem;color:var(--ink)}
+  .lang button svg{order:-1;width:22px;height:14px}
+  .lang .ln{display:inline;font-weight:500}
+}
+@media (max-width:420px){.logo img{height:56px}.bar{gap:10px}}
 
 .view{display:none;animation:fade .35s ease}
 .view.active{display:block}
@@ -296,8 +308,11 @@ footer ul{list-style:none;padding:0;margin:0;display:grid;gap:6px}
       <a href="#tarifas" data-t="nav.rates"></a>
       <a href="#contacto" data-t="nav.contact"></a>
     </nav>
+    <div class="langwrap">
+    <button class="lang-toggle" id="langBtn" aria-label="Idioma / Language" aria-expanded="false" aria-controls="lang"><span id="langCur"></span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
     <div class="lang" role="group" aria-label="Idioma / Language" id="lang">
       <button data-l="ca" aria-label="Català"><span>CA</span><svg viewBox="0 0 60 30" preserveAspectRatio="none" aria-hidden="true"><rect width="60" height="30" fill="#FCDD09"/><rect y="3.333" width="60" height="3.333" fill="#DA121A"/><rect y="9.999" width="60" height="3.333" fill="#DA121A"/><rect y="16.665" width="60" height="3.333" fill="#DA121A"/><rect y="23.331" width="60" height="3.333" fill="#DA121A"/></svg></button><button data-l="es" aria-label="Español"><span>ES</span><svg viewBox="0 0 60 30" preserveAspectRatio="none" aria-hidden="true"><rect width="60" height="30" fill="#AA151B"/><rect y="7.5" width="60" height="15" fill="#F1BF00"/></svg></button><button data-l="fr" aria-label="Français"><span>FR</span><svg viewBox="0 0 60 30" preserveAspectRatio="none" aria-hidden="true"><rect width="20" height="30" fill="#002395"/><rect x="20" width="20" height="30" fill="#FFFFFF"/><rect x="40" width="20" height="30" fill="#ED2939"/></svg></button><button data-l="en" aria-label="English"><span>EN</span><svg viewBox="0 0 60 30" preserveAspectRatio="none" aria-hidden="true"><rect width="60" height="30" fill="#012169"/><path d="M0,0L60,30M60,0L0,30" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0L60,30M60,0L0,30" stroke="#C8102E" stroke-width="2"/><path d="M30,0V30M0,15H60" stroke="#FFFFFF" stroke-width="10"/><path d="M30,0V30M0,15H60" stroke="#C8102E" stroke-width="6"/></svg></button>
+    </div>
     </div>
     <button class="btn btn-primary" data-book data-t="book"></button>
     <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="nav">
@@ -936,7 +951,7 @@ function route(){
   window.scrollTo(0,0);
 }
 addEventListener('hashchange',route);
-menuBtn.onclick=()=>{const o=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',o)};
+menuBtn.onclick=()=>{const o=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',o);if(o)langOpen(false)};
 
 /* ================= Horari (hora de Madrid) ================= */
 const OPEN_DAYS=[2,3,4,5,6]; // dc-dg (0 = dilluns)
@@ -1078,10 +1093,17 @@ function applyLang(l){
   lang=l;try{localStorage.setItem('tbl-lang',l)}catch(e){}
   document.documentElement.lang=l;
   document.querySelectorAll('[data-t]').forEach(el=>{const v=t(el.dataset.t);if(typeof v==='string')el.innerHTML=v});
-  document.querySelectorAll('#lang button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.l===l));
+  document.querySelectorAll('#lang button').forEach(b=>{b.setAttribute('aria-pressed',b.dataset.l===l);if(b.dataset.l===l)langCur.innerHTML=b.querySelector('svg').outerHTML+`<span>${l.toUpperCase()}</span>`});
   paintStatus();paintHours();renderStations();drawBars();renderBook();
 }
-document.getElementById('lang').addEventListener('click',e=>{const b=e.target.closest('[data-l]');if(b)applyLang(b.dataset.l)});
+/* Al mòbil els idiomes es mostren en un desplegable */
+const langEl=document.getElementById('lang'),langBtn=document.getElementById('langBtn'),langCur=document.getElementById('langCur');
+langEl.querySelectorAll('button').forEach(b=>b.insertAdjacentHTML('beforeend',`<span class="ln">${b.getAttribute('aria-label')}</span>`));
+const langOpen=o=>{langEl.classList.toggle('open',o);langBtn.setAttribute('aria-expanded',o)};
+langBtn.onclick=e=>{e.stopPropagation();const o=!langEl.classList.contains('open');langOpen(o);if(o){nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false')}};
+document.addEventListener('click',e=>{if(!e.target.closest('.langwrap'))langOpen(false)});
+addEventListener('keydown',e=>{if(e.key==='Escape')langOpen(false)});
+langEl.addEventListener('click',e=>{const b=e.target.closest('[data-l]');if(b){applyLang(b.dataset.l);langOpen(false)}});
 
 /* ================= Contacte ================= */
 function toast(x){const d=document.createElement('div');d.className='toast';d.textContent=x;document.body.appendChild(d);setTimeout(()=>d.remove(),2600)}
